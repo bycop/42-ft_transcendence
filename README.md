@@ -1,5 +1,5 @@
 # 42-ft_transcendance
-42 | Web project with a Pong and a Chat
+42 | Web project with a Pong and a Chat using NestJS, VueJS, socket.io and postgres database
 
 <p align="center"> 
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/bycop/42-ft_transcendance">
