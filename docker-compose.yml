@@ -1,0 +1,55 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: backend_container
+    restart: always
+    build:
+      context: web
+      dockerfile: Dockerfile
+      args:
+        - BUILD_MODE=${BUILD_MODE}
+    env_file: 
+      - .env
+    ports:
+      - 80:80
+      - 3000:3000
+      - 9229:9229
+      - 7200-7300:7200-7300
+    networks:
+      - webnet
+    depends_on:
+      - postgres
+    volumes:
+      - type: bind
+        source: ./web/backend/src/
+        target: /usr/src/app/backend/src/
+      - type: bind
+        source: ./web/shared/
+        target: /usr/src/app/shared/
+      - type: bind
+        source: ./web/frontend/src/
+        target: /usr/src/app/frontend/src/
+
+  postgres:
+    container_name: postgres_container
+    image: postgres
+    restart: always
+    networks:
+      - webnet
+    environment:
+      POSTGRES_PASSWORD: test
+      POSTGRES_USER: test1
+      POSTGRES_DB: transcendance
+      PG_DATA: /var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init-database.sql:/docker-entrypoint-initdb.d/init-database.sql
+
+networks:
+  webnet:
+    driver: bridge
+volumes:
+  pgdata: {}

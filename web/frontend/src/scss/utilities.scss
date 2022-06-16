@@ -1,0 +1,116 @@
+/*
+  ---------------------
+  ------- COLOR -------
+  ---------------------
+ */
+
+$primary: #151515;
+$secondary: #FBF9FF;
+$tertiary: #ABB4BC;
+$accent: #FF5500;
+$accent2: #FFCA03;
+$red: #DB504C;
+$green: #549F56;
+$mac: 2545px;
+$laptop: 1080px;
+$tablet: 768px;
+
+.color-primary {
+  color: $primary;
+}
+
+.color-primary-hover {
+	color: $primary;
+}
+
+.color-primary-hover:hover {
+	color: $accent;
+}
+
+.color-secondary {
+  color: $secondary;
+}
+
+.color-secondary-hover {
+	color: $secondary;
+}
+
+.color-secondary-hover:hover {
+	color: $accent;
+}
+
+.color-tertiary {
+  color: $tertiary;
+}
+
+.color-accent {
+  color: $accent;
+}
+
+.color-accent2 {
+  color: $accent2;
+}
+
+.color-green {
+  color: $green;
+}
+
+.color-red {
+  color: $red;
+}
+
+// BACKGROUND
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.bg-tertiary {
+  background-color: $tertiary;
+}
+
+.bg-accent {
+  background-color: $accent;
+}
+
+.bg-accent2 {
+  background-color: $accent2;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+// BORDER
+
+.border-secondary {
+  border-color: $secondary;
+}
+.border-accent {
+  border-color: $accent;
+}
+
+///*
+//  --------------------
+//  ------- SIZE -------
+//  --------------------
+// */
+//
+////@media screen and (max-width: $tablet) {
+//.sizeLittle {
+//  font-size: 0.75em;
+//}
+//.sizeBody {
+//  font-size: 1em;
+//}
+//.sizeTitle {
+//  font-size: 2em;
+//}
