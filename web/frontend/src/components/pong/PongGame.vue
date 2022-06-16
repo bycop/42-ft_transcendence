@@ -104,7 +104,7 @@ export default class PongGame extends Vue
     });
     this.Socket = socket;
 
-	if (socket)
+	if (!socket)
 		return ;
     socket.on("connect", () => {
       socket.emit("authreq", (this as any).$cookies.get("session_id"));
