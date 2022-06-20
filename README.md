@@ -11,7 +11,7 @@
 
 My git repository for ft_transcendence project at **42 school**
 
-Graded by students : **---%**
+Graded by students : **100%**
 
 ## How to start
 - Launch docker
