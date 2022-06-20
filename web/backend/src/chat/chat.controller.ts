@@ -283,8 +283,12 @@ export class ChatController {
 		else {
 			await knex('invite').where({user_2: user.id}).update({
 				accepted: true
-			})
-			let match = await this.pongService.CreateMatchClassic(invite.user_1, invite.user_2);
+			});
+			let match;
+			if (invite.is_classic)
+				 match = await this.pongService.CreateMatchClassic(invite.user_1, invite.user_2);
+			else
+				match = await this.pongService.CreateMatchCustom(invite.user_1, invite.user_2);
 			match?.Start();
 			return (match?.GetPort());
 		}
