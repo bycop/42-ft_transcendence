@@ -20,4 +20,7 @@ Graded by students : **---%**
 - Wait for building
 - Api is now on localhost:3000 and website on localhost:80 (localhost)
 
+## Db diagram
+<img src="https://i.imgur.com/ppw4K7S.png" width="50%">
+
 **Educational purpose only, Do not copy any of theses files**
